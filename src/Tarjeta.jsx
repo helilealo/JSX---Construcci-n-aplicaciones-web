@@ -57,47 +57,47 @@ function Tarjeta() {
 
       <main className="productos">
 
-        {productos.map((producto, index) => (
-          <div className="tarjeta" key={index}>
+        {productos.map((producto, foto) => (
+          <div className="tarjeta" key={foto}>
 
             <div className="imagen-producto">
 
-               {index === 0 ? (
+               {foto === 0 ? (
         <img
           src="/monalisa.jpg"
           alt="La Mona Lisa"
         />
-      ) : index === 1 ? (
+      ) : foto === 1 ? (
         <img
           src="/El grito.jpg"
           alt="El Grito"
         />
-      ) : index === 2 ? (
+      ) : foto === 2 ? (
         <img
           src="/NASA.jpg"
           alt="NASA"
         />
-      ) : index === 3 ? (
+      ) : foto === 3 ? (
         <img
           src="/impresion sol.jpg"
           alt="IMPRESIÓN, SOL NACIENTE"
         />
-      ) : index === 4 ? (
+      ) : foto === 4 ? (
         <img
           src="/Capilla sixtina.jpg"
           alt="LA CAPILLA SIXTINA"
         />
-      ) : index === 5 ? (
+      ) : foto === 5 ? (
         <img
           src="/ultima cena.jpg"
           alt="La Última Cena"
         />
-      ) : index === 6 ? (
+      ) : foto === 6 ? (
         <img
           src="/la joven de la perla.jpg"
           alt="LA JOVEN DE LA PERLA"
         />
-      ) : index === 7 ? (
+      ) : foto === 7 ? (
         <img
           src="/nacimiento venus.jpg"
           alt="El Nacimiento de Venus"
