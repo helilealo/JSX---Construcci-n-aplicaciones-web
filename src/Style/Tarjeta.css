@@ -1,0 +1,177 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: white;
+  color: #212529;
+}
+
+/* ENCABEZADO */
+
+.hero {
+  height: 315px;
+  background-color: #e2c59e;
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 54px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.hero p {
+  font-size: 21px;
+  color: #000000;
+}
+
+/* PRODUCTOS */
+
+.productos {
+  width: 1220px;
+  max-width: 90%;
+  margin: 95px auto;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 48px;
+}
+
+/* TARJETA */
+
+.tarjeta {
+  border: 1px solid #d8d8d8;
+  border-radius: 6px;
+  overflow: hidden;
+  background-color: white;
+
+  min-height: 370px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* IMAGEN */
+
+.imagen-producto {
+  height: 350px;
+  background-color: #dee2e6;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.imagen-producto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.imagen-vacia {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #777;
+  font-size: 32px;
+  font-weight: 300;
+}
+/* CONTENIDO */
+
+.contenido {
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 25px 15px 20px;
+
+  text-align: center;
+}
+
+.contenido h2 {
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+
+/* PRECIO */
+
+.precio {
+  font-size: 16px;
+  margin-bottom: auto;
+  min-height: 28px;
+}
+
+.precio-anterior {
+  color: #777;
+  text-decoration: line-through;
+  margin-right: 5px;
+}
+
+/* BOTÓN */
+
+.contenido button {
+  background-color: white;
+
+  border: 1px solid #6c757d;
+  border-radius: 5px;
+
+  padding: 9px 13px;
+
+  font-size: 16px;
+  color: #212529;
+
+  cursor: pointer;
+
+  margin-top: 20px;
+}
+
+.contenido button:hover {
+  background-color: #212529;
+  color: white;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1000px) {
+  .productos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+
+  .hero {
+    height: 250px;
+  }
+
+  .hero h1 {
+    font-size: 38px;
+  }
+
+  .hero p {
+    font-size: 17px;
+  }
+
+  .productos {
+    grid-template-columns: 1fr;
+    margin-top: 50px;
+  }
+}
