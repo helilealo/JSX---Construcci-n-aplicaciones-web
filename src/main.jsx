@@ -1,22 +1,23 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-
+import Formulario from "./Orquestador/Formulario";
 import Tarjeta from "./Orquestador/Tarjeta";
-import Form2 from "./Orquestador/form2";
 import Obras from "./data.json";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
+    
     <div className="pagina">
-
-      <header className="hero">
+    
+    <header className="hero">
         <h1>GalHelyColl</h1>
         <p>Tienda de arte</p>
-      </header>
-
+    </header>
+  
       <main className="productos">
 
-        {Obras.map((obra) => (
+        {
+        Obras.map((obra) => (
           <Tarjeta
             key={obra.id}
             title={obra.title}
@@ -24,12 +25,12 @@ createRoot(document.getElementById("root")).render(
             color={obra.color}
             img={obra.img}
           />
-        ))}
+        ))
+          } 
 
       </main>
 
-      <Form2 />
-
     </div>
+    <Formulario />
   </StrictMode>
 );
